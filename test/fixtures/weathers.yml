@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temperature: MyString
+  currentdate: MyString
+  currenttime: MyString
+
+two:
+  temperature: MyString
+  currentdate: MyString
+  currenttime: MyString

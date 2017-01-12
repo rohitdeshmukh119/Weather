@@ -1,0 +1,26 @@
+
+<!-- Heading -->
+<div class="heading"><h1> Bangalore Temperature Trend for Today (F)</h1></div>
+
+<!-- Maximum Temperature -->
+<div class = "holder">
+<div class= "circle circle_max"><%= @maxtemp%> </div>
+<p>Maximum Temperature</p>
+</div>
+
+<!-- Current Temperature -->
+<div class = "holder">
+<div class= "circle_curr circle"><%= @temperatures.last %> </div>
+<p>Current Temperature</p>
+</div>
+
+<!-- Minimum Temperature -->
+<div class = "holder">
+<div class= "circle_min circle"><%= @mintemp %> </div>
+<p>Minimum Temperature</p>
+</div>
+
+<!-- Heading -->
+<%= line_chart Weather.where(currentdate: Time.now.to_date).pluck(:currenttime, :temperature), min: 285, max: 305, xtitle: "Time", ytitle: "Temperature" %>
+
+
